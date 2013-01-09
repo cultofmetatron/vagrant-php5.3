@@ -1,0 +1,14 @@
+
+<%
+#get a list of paths in the directory
+@baseurl = @node[:vagrant][:directory] + "/sites/" 
+
+
+
+%>
+
+<VirtualHost *:80>
+	ServerAdmin webmaster@sites.foo
+	ServerName sites.foo
+    DocumentRoot <%= @baseurl %>
+</VirtualHost>
